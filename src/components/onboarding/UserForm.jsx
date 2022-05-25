@@ -7,16 +7,20 @@ export default function UserForm() {
   const [displayName, setDisplayName] = useState('');
   return (
     <div>
-      <h1>Full Name</h1>
+      <label htmlFor="fullName">Full Name</label>
       <input
+        name="fullName"
+        id="fullName"
         type="text"
         value={fullName}
         onChange={(e) => {
           setFullName(e.target.value);
         }}
       />
-      <h1> Display Name</h1>
+      <label htmlFor="displayName"> Display Name</label>
       <input
+        name="displayName"
+        id="displayName"
         type="text"
         value={displayName}
         onChange={(e) => {
