@@ -1,14 +1,42 @@
+import { useState } from 'react';
 import { useOnboardingContext } from '../../context/OnboardingContext';
 
 export default function PlanForm() {
-  const { setCurrentStage } = useOnboardingContext();
+  const { setCurrentStage, setOnboardingData } = useOnboardingContext();
+  const [plan, setPlan] = useState('self');
   return (
     <div>
-      <h1>Work Space</h1>
-      <input type="text" />
-      <h1>Work Space URL</h1>
-      <input type="text" />
-      <button onClick={() => setCurrentStage(3)}>Create Workspace</button>
+      <input
+        type="radio"
+        value="self"
+        name="plan"
+        onChange={(e) => {
+          setPlan(e.target.value);
+        }}
+        checked={plan === 'self'}
+      />
+      <h1>For Myself</h1>
+      <input
+        type="radio"
+        value="team"
+        name="plan"
+        onChange={(e) => {
+          setPlan(e.target.value);
+        }}
+        checked={plan === 'team'}
+      />
+      <h1>For My Team</h1>
+      <button
+        onClick={() => {
+          setOnboardingData((prevState) => ({
+            ...prevState,
+            plan,
+          }));
+          setCurrentStage(4);
+        }}
+      >
+        Create Workspace
+      </button>
     </div>
   );
 }

@@ -1,14 +1,40 @@
+import { useState } from 'react';
 import { useOnboardingContext } from '../../context/OnboardingContext';
 
 export default function WorkSpaceForm() {
-  const { setCurrentStage } = useOnboardingContext();
+  const { setCurrentStage, setOnboardingData } = useOnboardingContext();
+  const [workspaceName, setWorkspaceName] = useState('');
+  const [workspaceUrl, setWorkspaceUrl] = useState('');
   return (
     <div>
-      <input type="radio" />
-      <h1>For Myself</h1>
-      <input type="radio" />
-      <h1>For My Team</h1>
-      <button onClick={() => setCurrentStage(4)}>Create Workspace</button>
+      <h1>Work Space</h1>
+      <input
+        type="text"
+        value={workspaceName}
+        onChange={(e) => {
+          setWorkspaceName(e.target.value);
+        }}
+      />
+      <h1>Work Space URL</h1>
+      <input
+        type="text"
+        value={workspaceUrl}
+        onChange={(e) => {
+          setWorkspaceUrl(e.target.value);
+        }}
+      />
+      <button
+        onClick={() => {
+          setOnboardingData((prevState) => ({
+            ...prevState,
+            workspaceName,
+            workspaceUrl,
+          }));
+          setCurrentStage(3);
+        }}
+      >
+        Create Workspace
+      </button>
     </div>
   );
 }

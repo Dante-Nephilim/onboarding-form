@@ -13,10 +13,10 @@ export default function OnboardingForm() {
         <UserForm />
       </div>
       <div id="Two" hidden={currentStage !== 2}>
-        <PlanForm />
+        <WorkSpaceForm />
       </div>
       <div id="Three" hidden={currentStage !== 3}>
-        <WorkSpaceForm />
+        <PlanForm />
       </div>
       <div id="Four" hidden={currentStage !== 4}>
         <h1>Congratulations..!</h1>
