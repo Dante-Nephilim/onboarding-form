@@ -7,16 +7,24 @@ export default function WorkSpaceForm() {
   const [workspaceUrl, setWorkspaceUrl] = useState('');
   return (
     <div>
-      <h1>Work Space</h1>
+      <h1>Let's set up a home for all your work</h1>
+
+      <p>You can always create another workspace later.</p>
+
+      <label htmlFor="workspaceName">Work Space</label>
       <input
+        name="workspaceName"
+        id="workspaceName"
         type="text"
         value={workspaceName}
         onChange={(e) => {
           setWorkspaceName(e.target.value);
         }}
       />
-      <h1>Work Space URL</h1>
+      <label htmlFor="workspaceUrl">Work Space URL</label>
       <input
+        name="workspaceUrl"
+        id="workspaceUrl"
         type="text"
         value={workspaceUrl}
         onChange={(e) => {

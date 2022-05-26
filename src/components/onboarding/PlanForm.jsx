@@ -6,26 +6,34 @@ export default function PlanForm() {
   const [plan, setPlan] = useState('self');
   return (
     <div>
+      <h1>How are you planning to use Eden?</h1>
+
+      <p>We'll streamline your setup experience accordingly.</p>
+
       <input
         type="radio"
         value="self"
+        id="self"
         name="plan"
         onChange={(e) => {
           setPlan(e.target.value);
         }}
         checked={plan === 'self'}
       />
-      <h1>For Myself</h1>
+      <label htmlFor="self">For Myself</label>
+
       <input
         type="radio"
         value="team"
+        id="team"
         name="plan"
         onChange={(e) => {
           setPlan(e.target.value);
         }}
         checked={plan === 'team'}
       />
-      <h1>For My Team</h1>
+      <label htmlFor="team">For My Team</label>
+
       <button
         onClick={() => {
           setOnboardingData((prevState) => ({
