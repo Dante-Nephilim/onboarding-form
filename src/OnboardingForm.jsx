@@ -9,7 +9,19 @@ export default function OnboardingForm() {
 
   return (
     <div>
-      <div></div>
+      <div>
+        {[1, 2, 3, 4].map((stage) => (
+          <div
+            key={stage}
+            style={{
+              backgroundColor: `${stage <= currentStage ? 'blue' : ''}`,
+            }}
+          >
+            {stage}
+          </div>
+        ))}
+      </div>
+
       <div id="One" hidden={currentStage !== 1}>
         <UserForm />
       </div>
