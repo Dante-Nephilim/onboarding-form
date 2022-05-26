@@ -1,10 +1,15 @@
-import { useState } from 'react';
+import { useMemo, useState } from 'react';
 import { useOnboardingContext } from '../../context/OnboardingContext';
 
 export default function WorkSpaceForm() {
   const { setCurrentStage, setOnboardingData } = useOnboardingContext();
   const [workspaceName, setWorkspaceName] = useState('');
   const [workspaceUrl, setWorkspaceUrl] = useState('');
+
+  const isDisabled = useMemo(() => {
+    return !workspaceName || !workspaceUrl;
+  }, [workspaceName, workspaceUrl]);
+
   return (
     <div>
       <h1>Let's set up a home for all your work</h1>
@@ -32,6 +37,7 @@ export default function WorkSpaceForm() {
         }}
       />
       <button
+        disabled={isDisabled}
         onClick={() => {
           setOnboardingData((prevState) => ({
             ...prevState,

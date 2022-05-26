@@ -1,10 +1,15 @@
-import { useState } from 'react';
+import { useMemo, useState } from 'react';
 import { useOnboardingContext } from '../../context/OnboardingContext';
 
 export default function UserForm() {
   const { setCurrentStage, setOnboardingData } = useOnboardingContext();
   const [fullName, setFullName] = useState('');
   const [displayName, setDisplayName] = useState('');
+
+  const isDisabled = useMemo(() => {
+    return !fullName || !displayName;
+  }, [fullName, displayName]);
+
   return (
     <div>
       <h1>Welcome! First things first...</h1>
@@ -32,6 +37,7 @@ export default function UserForm() {
         }}
       />
       <button
+        disabled={isDisabled}
         onClick={() => {
           setOnboardingData((prevState) => ({
             ...prevState,

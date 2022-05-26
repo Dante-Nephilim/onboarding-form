@@ -4,6 +4,7 @@ import { useOnboardingContext } from '../../context/OnboardingContext';
 export default function PlanForm() {
   const { setCurrentStage, setOnboardingData } = useOnboardingContext();
   const [plan, setPlan] = useState('self');
+  
   return (
     <div>
       <h1>How are you planning to use Eden?</h1>
