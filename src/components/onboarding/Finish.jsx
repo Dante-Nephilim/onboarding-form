@@ -1,11 +1,17 @@
 export default function Finish() {
   return (
     <div>
-      <h1>Congratulations, Eren!</h1>
+      <h1 className="my-4 text-center text-2xl font-semibold">
+        Congratulations, Eren!
+      </h1>
 
-      <p>You have completed onboarding, you can start using the Eden!</p>
+      <p className="text-md my-4 text-center font-light text-gray-700">
+        You have completed onboarding, you can start using the Eden!
+      </p>
 
-      <button onClick={() => {}}>Launch Project</button>
+      <button className="eden-button" onClick={() => {}}>
+        Launch Project
+      </button>
     </div>
   );
 }

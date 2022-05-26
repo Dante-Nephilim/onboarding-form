@@ -4,12 +4,16 @@ import { useOnboardingContext } from '../../context/OnboardingContext';
 export default function PlanForm() {
   const { setCurrentStage, setOnboardingData } = useOnboardingContext();
   const [plan, setPlan] = useState('self');
-  
+
   return (
     <div>
-      <h1>How are you planning to use Eden?</h1>
+      <h1 className="my-4 text-center text-2xl font-semibold">
+        How are you planning to use Eden?
+      </h1>
 
-      <p>We'll streamline your setup experience accordingly.</p>
+      <p className="text-md my-4 text-center font-light text-gray-700">
+        We'll streamline your setup experience accordingly.
+      </p>
 
       <input
         type="radio"
@@ -36,6 +40,7 @@ export default function PlanForm() {
       <label htmlFor="team">For My Team</label>
 
       <button
+        className="eden-button"
         onClick={() => {
           setOnboardingData((prevState) => ({
             ...prevState,

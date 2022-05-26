@@ -2,7 +2,7 @@ import { createContext, useContext, useState } from 'react';
 
 const OnboardingContext = createContext();
 export default function OnboardingContextProvider(props) {
-  const [currentStage, setCurrentStage] = useState(1);
+  const [currentStage, setCurrentStage] = useState(3);
   const [onboardingData, setOnboardingData] = useState({
     fullName: '',
     displayName: '',
