@@ -7,6 +7,10 @@ export default function UserForm() {
   const [displayName, setDisplayName] = useState('');
   return (
     <div>
+      <h1>Welcome! First things first...</h1>
+
+      <p>You can always change them later.</p>
+
       <label htmlFor="fullName">Full Name</label>
       <input
         name="fullName"

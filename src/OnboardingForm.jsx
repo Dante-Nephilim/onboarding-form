@@ -1,3 +1,4 @@
+import Finish from './components/onboarding/Finish';
 import PlanForm from './components/onboarding/PlanForm';
 import UserForm from './components/onboarding/UserForm';
 import WorkSpaceForm from './components/onboarding/WorkSpaceForm';
@@ -19,8 +20,7 @@ export default function OnboardingForm() {
         <PlanForm />
       </div>
       <div id="Four" hidden={currentStage !== 4}>
-        <h1>Congratulations..!</h1>
-        <button onClick={() => {}}>Launch Project</button>
+        <Finish />
       </div>
     </div>
   );
