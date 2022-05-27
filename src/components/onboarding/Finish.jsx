@@ -9,9 +9,11 @@ export default function Finish() {
         You have completed onboarding, you can start using the Eden!
       </p>
 
-      <button className="eden-button" onClick={() => {}}>
-        Launch Project
-      </button>
+      <div className="flex flex-col items-stretch gap-5 px-10">
+        <button className="eden-button" onClick={() => {}}>
+          Launch Project
+        </button>
+      </div>
     </div>
   );
 }
