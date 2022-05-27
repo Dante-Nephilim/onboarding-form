@@ -3,13 +3,15 @@ import PlanForm from './components/onboarding/PlanForm';
 import UserForm from './components/onboarding/UserForm';
 import WorkSpaceForm from './components/onboarding/WorkSpaceForm';
 import { useOnboardingContext } from './context/OnboardingContext';
+import leafSvg from './icons/leaf-sharp.svg';
 
 export default function OnboardingForm() {
   const { currentStage } = useOnboardingContext();
 
   return (
     <div>
-      <div className="flex justify-center">
+      <div className="flex items-center justify-center gap-3">
+        <img src={leafSvg} className="h-8 w-8" alt="eden-logo" />
         <h1 className="text-4xl font-bold">Eden</h1>
       </div>
       <div className="my-10 flex items-center justify-center">

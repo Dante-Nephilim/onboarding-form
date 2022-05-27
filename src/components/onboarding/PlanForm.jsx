@@ -35,7 +35,20 @@ export default function PlanForm() {
                   plan === 'self' ? 'border-indigo-600' : 'border-grey-700'
                 }`}
               >
-                <p className="text-md mb-3 font-semibold text-gray-900">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="h-6 w-6"
+                  viewBox="0 0 20 20"
+                  fill={`${plan === 'self' ? '#4338CA' : '#404040'}`}
+                >
+                  <path
+                    fillRule="evenodd"
+                    d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z"
+                    clipRule="evenodd"
+                  />
+                </svg>
+
+                <p className="text-md my-3 font-semibold text-gray-900">
                   For Myself
                 </p>
                 <p className="text-sm text-gray-800">
@@ -63,7 +76,16 @@ export default function PlanForm() {
                   plan === 'team' ? 'border-indigo-600' : 'border-grey-700'
                 }`}
               >
-                <p className="text-md mb-3 font-semibold text-gray-900">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-6 w-6"
+                  viewBox="0 0 20 20"
+                  fill={`${plan === 'team' ? '#4338CA' : '#404040'}`}
+                >
+                  <path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3zM6 8a2 2 0 11-4 0 2 2 0 014 0zM16 18v-3a5.972 5.972 0 00-.75-2.906A3.005 3.005 0 0119 15v3h-3zM4.75 12.094A5.973 5.973 0 004 15v3H1v-3a3 3 0 013.75-2.906z" />
+                </svg>
+
+                <p className="text-md my-3 font-semibold text-gray-900">
                   With my team
                 </p>
                 <p className="text-sm text-gray-800">

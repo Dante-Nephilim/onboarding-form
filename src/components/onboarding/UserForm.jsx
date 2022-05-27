@@ -19,7 +19,7 @@ export default function UserForm() {
       <p className="text-md mt-4 mb-10 text-center font-light text-gray-700">
         You can always change them later.
       </p>
-      <div className="flex flex-col items-stretch gap-5 px-10">
+      <div className="flex flex-col items-stretch gap-5 px-2 lg:px-10">
         <div className="flex flex-col items-stretch">
           <label className="eden-label" htmlFor="fullName">
             Full Name
