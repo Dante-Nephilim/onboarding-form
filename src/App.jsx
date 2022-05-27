@@ -4,7 +4,7 @@ import OnboardingForm from './OnboardingForm';
 
 function App() {
   return (
-    <div className="App">
+    <div className="mx-auto mt-24 max-w-lg px-5">
       <OnboardingContextProvider>
         <OnboardingForm />
       </OnboardingContextProvider>
